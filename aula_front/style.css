@@ -1,0 +1,87 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  height: 250px;
+  background: gray;
+}
+
+header div{
+  height: 150px;
+}
+
+#logo{
+  height: 150px;
+  width: 150px;
+  display: inline-block;}
+
+#slogan{
+}
+
+nav{
+}
+
+nav ul li{
+  float: left;
+  list-style: none;
+  padding: 20px;
+  margin: 0 2px;
+  width: 100px;
+}
+
+aside{
+  background-color: yellow;
+  width: 30%;
+  float: right;
+  height: calc(100vh - 150px);
+  margin-top: 10px;
+}
+
+main{
+  width: 70%;
+  float: left;
+}
+
+footer{
+  background-color: rgb(187, 194, 187);
+  clear: both;
+  height: 130px;
+}
+
+#footer-dados{
+  float: right;
+  padding: 10px;
+}
+
+#footer-copy{
+  float: left;
+  padding: 10px;
+  line-height: 110px;
+}
+
+section{
+  background-color: purple;
+  padding: 0 0 10px 0;
+  margin: 30px;
+  height: 50vh;
+}
+
+section div{
+  padding: 10px;
+}
+
+.header-section{
+  background-color: gray;
+  height: 50px;
+  line-height: 50px;
+}
+
+.header-section h2{
+  padding-left: 10px;
+}
+
+h1{
+  text-align: center;
+}
