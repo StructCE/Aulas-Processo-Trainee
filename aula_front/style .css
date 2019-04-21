@@ -1,0 +1,139 @@
+*{                                                 /* Para todo os elementos da pagina */
+  margin: 0;                                       /* remova a margem */
+  padding: 0;                                      /* e remova os espaçamentos */
+}                                                  /*  */
+
+#page-header{                                      /* Para o header da página */
+  height: 240px;                                   /* altura = 240px */
+  background-color: #00ef7f;                       /* fundo verde agua */
+}                                                  /*  */
+
+#page-header-content{                              /* Para o conteudo do cabeçalho */
+  height: 190px;                                   /* altura = 190 -> 240px - tamanho do menu */
+}                                                  /*  */
+
+#header-logo{                                      /* Para a Logo do menu */
+  display: inline-flex;                            /* Disposição em linha e flexivel */
+  justify-content: center;                         /* Alinha o que esta dentro ao centro em X */
+  align-items: center;                             /* alinha o que esta dentro ao centro em Y */
+  float: left;                                     /* Vai para o plano de flutuação a esquerda */
+  height: 190px;                                   /* Altura = 190px -> igual ao tamanho do container #page-header-content*/
+  width: 190px;                                    /* largura = 190px -> para ficar quadrado */
+}                                                  /*  */
+
+#header-slogan{                                    /* Para o slogan no menu */
+  display: inline-block;                           /* Disposição em linha e bloco */
+  float: left;                                     /* Vai para o plano de flutuação a esquerda */
+  height: 190px;                                   /* Altura = 190px -> igual ao tamanho do container */
+  line-height: 190px;                              /* Altura da linha de TEXTO = 190px -> o texto sempre esta no centro desta linha */
+  margin-left: 100px;                              /* Margem a esquerda = 100px -> para afastar da logo (Problema: em mobile se somarmos 100 + slogan + logo, já saimos da tela do celular)*/
+  font-size: 18px;                                 /* Aumenta o tamanho da fonte */
+  font-weight: bold;                               /* Coloca a fonte em negrito */
+  text-transform: uppercase;                       /* Coloca toda a fonte em maiúsculo */
+  color: white;                                    /* E cor branca */
+}                                                  /*  */
+
+#page-nav{                                         /* Para o menu da página */
+  height: 50px;                                    /* altura = 50px */
+  background: rgba(0,0,0,0.3);                     /* fundo preto (0,0,0) com opacidade de 0.3 */
+  overflow: hidden;                                /* Tudo que sair deste quadrado será ocultado da tela */
+}                                                  /*  */
+
+#page-nav ul li{                                   /* Para todos os items do menu */
+  display: inline-block;                           /* Disposição em linha e bloco */
+  list-style: none;                                /* Remove o estilo da lista (pontinhos, bolinhas ...) */
+}                                                  /*  */
+
+#page-nav ul li a{                                 /* Para todos os links do menu */
+  display: inline-block;                           /* Disposição em linha e bloco */
+  padding: 10px 20px;                              /* espaçamento de 10px em Y e 20px em X */
+  margin: 0 1px;                                   /* margem de 0 em Y e 1px em X */
+  line-height: 30px;                               /* Altura da linha de TEXTO = 30px -> o texto sempre esta no centro desta linha */
+  text-decoration: none;                           /* Remove decoração do texto (sublinhado, ...) */
+  text-transform: uppercase;                       /* Coloca toda a fonte em maiúsculo */
+  color: white;                                    /* Em branco */
+  background-color: rgba(255,255,255, 0.3);        /* e com fundo preto e opacidade = 0.3 */
+}                                                  /*  */
+
+#page-nav ul li a:hover{                           /* Para todos os links do menu, ao passar o mouse por cima */
+  background-color: rgba(255,255,255, 0.25);       /* troca fundo para preto com opacidade = 0.25 */
+}                                                  /*  */
+
+#ads-side{                                         /* Para os anúncios da lateral */
+  float: left;                                     /* Vai para o plano de flutuação a esquerda */
+  width: 180px;                                    /* Largura = 180px */
+  background-color: yellow;                        /* Fundo amarelo */
+  min-height: 400px;                               /* Altura minima = 400px */
+  margin: 20px 0 0 5px;                            /* margem a cima de 20px e a esquerda de 5px */
+  padding: 10px;                                   /* Espaçamento de 10px */
+  box-sizing: border-box;                          /* Define que as propriedades de dimensão (border + padding + height/width) estão limitadas ao height/width */
+}                                                  /*  */
+
+main{                                              /* Para o conteudo principal da página */
+  margin: 20px 0;                                  /* margem de 20px em Y */
+  float:left;                                      /* Para os anúncios da lateral */
+  width: calc(100% - 185px);                       /* largura igual a 100% da página - 185px (180px do anúncio lateral + 5 de margem) */
+}                                                  /*  */
+
+main h1{                                           /* Para o titulo da página */
+  text-align: center;                              /* alinha texto ao centro */
+  line-height: 80px;                               /* Com tamanho da linha em 80px */
+}                                                  /*  */
+
+main section{                                      /* Para todas as seções dentro do conteudo principal */
+  width: 80%;                                      /*  */
+  margin: 10px auto;                               /*  */
+  border: solid 2px #ddd;                          /* Borda solida de 2px cinza*/
+  border-radius: 10px;                             /* Curvatura da borda de 10px */
+  overflow: hidden;                                /* Esconde tudo que ultrapaçar o quadrado da seção */
+  box-shadow: 1px 1px 10px #ddd;                   /* Adiciona caixa de sombra (Distancia x,distancia y, blur (desfoque), color) */
+}                                                  /*  */
+
+.section-header h2{                                /* Para todos os h2 nos cabeçalhos das seções */
+  padding: 7px;                                    /*  */
+  background-color: #777;                          /*  */
+  line-height: 40px;                               /*  */
+  color: white;                                    /*  */
+}                                                  /*  */
+
+.section-content{                                  /* Para todos os conteudos das seções */
+  padding: 20px;                                   /*  */
+  min-height: 300px;                               /*  */
+}                                                  /*  */
+
+.section-content-video{                            /* Para todos os conteudos, reservados para videos e texto */
+  display: flex;                                   /*  */
+  justify-content: space-around;                   /*  */
+}                                                  /*  */
+
+.section-content-video div{                        /* Para todos os videos das seções que possuem videos */
+  width: 30vw;                                     /* Tamanho = 30% do tamanho total do dispositivo */
+  height: 30vw;                                    /* Altura = 30% do tamanho total do dispositivo */
+  background: #eee;                                /*  */
+  display: inline-flex;                            /* Disposição em linha e flexível */
+  align-items: center;                             /* Centraliza o conteudo em Y */
+  justify-content: center;                         /* Centraliza o conteudo em X */
+}                                                  /*  */
+
+.section-content-video p{                          /* Para todos os textos das seções que possuem videos */
+  width: 50%;                                      /* Largura = 50% do tamanho total do objeto pai */
+  padding: 10px;                                   /*  */
+  box-sizing: border-box;                          /*  */
+}                                                  /*  */
+
+footer{                                            /*  */
+  clear: both;                                     /* Ignora os estilos de flutuação dos objetos acima */
+  background-color: #00ef7f;                       /*  */
+  height: 170px;                                   /*  */
+}                                                  /*  */
+
+#footer-left{                                      /*  */
+  float: left;                                     /*  */
+  line-height: 170px;                              /*  */
+  margin-left: 20px;                               /*  */
+}                                                  /*  */
+
+#footer-right{                                     /*  */
+  float:right;                                     /*  */
+  padding: 30px;                                   /*  */
+}                                                  /*  */
