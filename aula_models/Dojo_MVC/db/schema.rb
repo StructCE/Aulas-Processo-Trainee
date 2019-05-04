@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_29_162454) do
+ActiveRecord::Schema.define(version: 2019_05_03_154518) do
 
   create_table "clans", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_04_29_162454) do
     t.string "birth_place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "clan_id"
+    t.index ["clan_id"], name: "index_users_on_clan_id"
   end
 
 end
