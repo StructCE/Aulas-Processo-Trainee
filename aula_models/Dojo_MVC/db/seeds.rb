@@ -9,4 +9,3 @@
 User.create(:name => "Josivaldo", :email => "Josi@gmail.com")
 User.create(:name => "Josivaldo2", :email => "Josi2@gmail.com")
 User.create(:name => "Josivaldo3", :email => "Josi3@gmail.com")
-

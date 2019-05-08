@@ -7,6 +7,8 @@
     <tr>
       <td><%= u.name %></td>
       <td><%= u.email %></td>
+      <td><%= link_to "Apagar", user_path(u), method: :delete%></td>
+      <td><%= link_to "Editar", edit_user_path(u)%></td>
     </tr>
   <% end %>
 </table>
