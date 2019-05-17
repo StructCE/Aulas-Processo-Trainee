@@ -1,0 +1,9 @@
+<%= form_with model:@clan , local:true do |form|%>
+  <%= form.label :name,"Nome do Clan"%><br>
+  <%= form.text_field :name%><br>
+  <%= form.label :validade, "Data de validade"%><br>
+  <%= form.date_field :validade%><br>
+  <%= form.label :user_id, "Líder"%><br>
+  <%= form.select :user_id, @users%><br><br>
+  <%= form.submit :Submeter%>
+<%end%>

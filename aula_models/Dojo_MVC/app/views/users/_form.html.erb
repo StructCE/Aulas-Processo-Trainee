@@ -1,0 +1,12 @@
+
+<%= form_with model:@user, local:true do |form|%>
+  <%= form.label :Nome%><br>
+  <%= form.text_field :name%><br>
+  <%= form.label :Email%><br>
+  <%= form.text_field :email%>
+  <%= form.submit :Submeter%><br>
+<% end %>
+
+<% @user.errors.full_messages.each do |error| %>
+  <p style = "color:red"><%= error %></p>
+<% end %>
