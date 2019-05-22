@@ -1,0 +1,9 @@
+<p>Clãs:</p>
+<% @clan.each do |clan|%>
+    <%= link_to clan_path(clan) do %><br>
+      <%= clan.name %>
+    <%end%>
+<%= link_to "Destroy", clan, method: :delete%>    
+<br>
+<%= link_to "Edit", edit_clan_path(clan)%>
+<%end%>

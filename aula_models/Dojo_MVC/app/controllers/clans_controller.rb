@@ -14,10 +14,17 @@ class ClansController < ApplicationController
   end
 
   def update 
-
+    @clan = Clan.find(params[:id])
+    if @clan.update(clan_params)
+      redirect_to clan_path(@clan)
+    else
+      render 'edit'
   end 
+end
 
-  def edit 
+  def edit
+     @clan = Clan.find(params[:id])
+     @users = User.all.collect{|user| [user.name, user.id]}
   end
 
   def show 
@@ -25,9 +32,13 @@ class ClansController < ApplicationController
   end 
 
   def index
+    @clan = Clan.all
   end
 
   def destroy 
+    @clan = Clan.find(params[:id])
+    @clan.destroy
+    redirect_to clans_path
   end
 
 private
