@@ -4,7 +4,7 @@
   <%= form.text_field :name%><br>
   <%= form.label :Email%><br>
   <%= form.text_field :email%>
-  <%= form.submit :Submeter%><br>
+  <%= form.submit :Submeter, class: 'btn btn-primary' %><br>
 <% end %>
 
 <% @user.errors.full_messages.each do |error| %>

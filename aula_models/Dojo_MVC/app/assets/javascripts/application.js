@@ -14,6 +14,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require popper
+//= require bootstrap
 //= require_tree .
 
 var texto = document.getElementById("texto");
@@ -28,5 +30,22 @@ texto.addEventListener('mouseenter', ()=>{
 });
 texto.addEventListener('mouseout', ()=>{
   document.getElementById('ale').remove();
-
 });
+
+var linha = prompt("Digite a quantidade de linhas");
+var coluna = prompt("Digite a quantidade de colunas");
+var i, j;
+
+var table = document.createElement('table');
+texto.appendChild(table);
+for(i = 1; i <= linha; i++) {
+  var tr = document.createElement('tr');
+  table.appendChild(tr);
+  for(j = 1; j <= coluna; j++) {
+    var td  = document.createElement('td');
+    tr.appendChild(td);
+    var valor = i*j;
+    td.innerHTML = valor;
+  }
+}
+
